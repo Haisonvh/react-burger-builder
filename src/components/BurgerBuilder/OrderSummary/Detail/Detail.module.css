@@ -1,0 +1,44 @@
+.Detail {
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    background-color: white;
+    border-radius: 8px;
+    border-color: darkred;
+    box-shadow: 2px 2px #00000020;
+    z-index: 200;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    text-align: left;
+    position: fixed;
+}
+@media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
+
+.Detail button {
+    background-color: transparent;
+    border: none;    
+    padding: 8px;
+    margin: 8px;
+    height: 48px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.Detail button:hover,
+.Detail button:active {
+    background-color:#dfdfdf;
+    border-bottom: 2px #d8360e;
+}
+
+.Cancel {
+    color: #ff0000;
+}
+
+.Submit {
+    color: #3700ff;
+}

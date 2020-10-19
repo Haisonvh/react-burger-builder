@@ -1,18 +1,12 @@
 import React,{Component} from 'react';
-import Burger from '../../components/BurgerBuilder/Burger/Burger'
+import BurgerBuilder from '../../components/BurgerBuilder/BurgerBuilder'
 
-class Layout extends Component{
-    tempdata = {
-        meat:2,
-        cheese:0,
-        salad:1,
-        bacon:1
-    }
+class Layout extends Component{    
     render(){
         return(
             <React.Fragment>
                 <div>ToolBar here</div>
-                <Burger ingredients={this.tempdata}/>
+                <BurgerBuilder/>
             </React.Fragment>
         );
     }

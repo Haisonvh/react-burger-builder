@@ -2,12 +2,13 @@ import classes from './Burger.module.css';
 import React from 'react';
 import Ingredient from './Ingredient/Ingredient'
 
-const burger = (props) => {
+const Burger = (props) => {
+      
     let dataIngredients = Object.keys(props.ingredients)
-        .map((igkey) => {
+        .map((igkey) => {            
             return(
-                [...Array(props.ingredients[igkey])].map((_,index) => {
-                    console.log(igkey);
+                //return the array of array ingredient base on the number of each ingredient
+                [...Array(props.ingredients[igkey])].map((_,index) => {                    
                     return (                       
                         <Ingredient type= {igkey} key={igkey+index} />
                     );
@@ -15,6 +16,7 @@ const burger = (props) => {
             );
         })
         .reduce((arr, el) => {
+            // merge into 1 array
             return arr.concat(el)
         }, []);
     if (dataIngredients.length === 0){
@@ -29,4 +31,4 @@ const burger = (props) => {
     );
 }
 
-export default burger;
+export default Burger;
